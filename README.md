@@ -4,9 +4,11 @@
 1. Follow instructions [below](#plugin-installation) to install the latest plugin
 2. update the `.spec.registry` field in `platform-config.yml` to contain a writable registry (make sure to docker login)
 3. cd into any one of the sample app in this repo
-4. Run `tanzu build --platform-config ../platform-config.yml` to build all apps, or `tanzu build --platform-config ../platform-config.yml --app-name my-app` to build `my-app` only.
+4. Run `tanzu build --platform-config ../platform-config.yml --output-dir /tmp/tanzu` to build all apps, or `tanzu build --platform-config ../platform-config.yml --app-name my-app  --output-dir /tmp/tanzu` to build `my-app` only.
+   (Note the platform config flag is temporary)
 
-Expected output
+
+Expected output:
 
 - Standard out should print:
 
