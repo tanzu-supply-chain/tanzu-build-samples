@@ -1,7 +1,7 @@
 apiVersion: apps.tanzu.vmware.com/v1
 kind: ContainerApp
 metadata:
-  name: my-app
+  name: single-image-multi-app
 spec:
   build:
     path: "single-image-multi-app-src"
