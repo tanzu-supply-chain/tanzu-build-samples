@@ -1,0 +1,1 @@
+harbor-dev.buildservice.dev/ci/test/api-gateway@sha256:3f943802535bdfd989e2dd72e4c475dddcb4b1f276695d47a7f57cc7f2c0e6e1

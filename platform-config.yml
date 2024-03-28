@@ -1,0 +1,11 @@
+apiVersion: build.tanzu.vmware.com/v1
+kind: ContainerAppBuildConfig
+metadata:
+  name: platform-config
+spec:
+  registry: ""
+  nonSecretEnv:
+  - name: FOO
+    value: bar
+  buildpacks:
+    builder: "paketobuildpacks/builder-jammy-base"

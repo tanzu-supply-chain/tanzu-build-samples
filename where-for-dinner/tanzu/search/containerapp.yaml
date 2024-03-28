@@ -1,0 +1,6 @@
+apiVersion: apps.tanzu.vmware.com/v1
+kind: ContainerApp
+metadata:
+  name: search
+spec:
+  image: harbor-dev.buildservice.dev/ci/test/search@sha256:9ba4e73bb91e411f2ac9d1b885dfb1a55579e2fc16178999ce72fe0043fd1dd2
