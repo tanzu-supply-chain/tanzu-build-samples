@@ -5,11 +5,11 @@ metadata:
 spec:
   build:
     path: "single-image-multi-app-src"
-    buildpacks:
-      env:
-      - name: BP_JVM_VERSION
-        value: "17"
-      - name: BP_JAVA_INSTALL_NODE
-        value: "true"
-      - name: BP_NODE_PROJECT_PATH
-        value: "frontend"
+    buildpacks: {}
+    nonSecretEnv:
+    - name: BP_JVM_VERSION
+      value: "17"
+    - name: BP_JAVA_INSTALL_NODE
+      value: "true"
+    - name: BP_NODE_PROJECT_PATH
+      value: "frontend"
