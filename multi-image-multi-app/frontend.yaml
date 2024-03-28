@@ -1,0 +1,16 @@
+apiVersion: apps.tanzu.vmware.com/v1
+kind: ContainerApp
+metadata:
+  name: web
+spec:
+  build:
+    path: "web"
+    nonSecretEnv:
+      - name: "BP_NODE_RUN_SCRIPTS"
+        value: "build"
+      - name: "BP_WEB_SERVER"
+        value: "ngingx"
+      - name: "BP_WEB_SERVER_ROOT"
+        value: "build"
+      - name: "BP_WEB_SERVER_ENABLE_PUSH_STATE"
+        value: "true"
