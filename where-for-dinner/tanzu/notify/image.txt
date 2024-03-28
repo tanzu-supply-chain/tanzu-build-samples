@@ -1,1 +1,0 @@
-harbor-dev.buildservice.dev/ci/test/notify@sha256:83b6f8b0ad9cb8691f0c2128d0316cd992329e6c38f2cf59e8e5ee58a1f81075

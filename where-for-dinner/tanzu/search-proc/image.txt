@@ -1,1 +1,0 @@
-harbor-dev.buildservice.dev/ci/test/search-proc@sha256:f02731d3a1a5153e3f77cc7746cd258516a3e28524df725eb8a23d73a40915cd

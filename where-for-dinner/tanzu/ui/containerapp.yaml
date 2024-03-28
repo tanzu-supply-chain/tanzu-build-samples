@@ -1,6 +1,0 @@
-apiVersion: apps.tanzu.vmware.com/v1
-kind: ContainerApp
-metadata:
-  name: ui
-spec:
-  image: harbor-dev.buildservice.dev/ci/test/ui@sha256:adb132140e2f48b6b5929c27d1d67aa85fb432d5652093c536a94b3c1c9bd112

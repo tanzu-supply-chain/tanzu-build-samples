@@ -1,6 +1,0 @@
-apiVersion: apps.tanzu.vmware.com/v1
-kind: ContainerApp
-metadata:
-  name: availability
-spec:
-  image: harbor-dev.buildservice.dev/ci/test/availability@sha256:07897ede7d0dc2a787561114d5f0fc27672068c3b6a0e6a4b48cc2756a8a7757
