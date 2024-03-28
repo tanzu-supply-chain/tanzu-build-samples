@@ -4,7 +4,7 @@ metadata:
   name: web
 spec:
   build:
-    path: "web"
+    path: "multi-image-multi-app-src/web"
     nonSecretEnv:
       - name: "BP_NODE_RUN_SCRIPTS"
         value: "build"
