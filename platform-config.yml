@@ -1,5 +1,5 @@
 apiVersion: build.tanzu.vmware.com/v1
-kind: ContainerAppBuildConfig
+kind: ContainerAppBuildPlan
 metadata:
   name: platform-config
 spec:
@@ -9,3 +9,10 @@ spec:
     value: bar
   buildpacks:
     builder: "paketobuildpacks/builder-jammy-base"
+  postBuild:
+  - name: apply-spring-boot-conventions
+    namedTask: tanzu-spring-boot
+  - name: add-env
+    containerTask:
+      image: tomkennedy73/container-app-modifier
+      args: ["SOME-ENV-NAME", "SOME-ENV-VALUE"]
