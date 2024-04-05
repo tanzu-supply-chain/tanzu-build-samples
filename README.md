@@ -35,7 +35,7 @@ Expected output:
 2. Ensure the `tanzu builder` plugin is up to date
     - `tanzu plugin list` - View the plugins you have installed and version
     - `tanzu plugin install builder` - Install the builder plugin if you don't have it
-    - `tanzu plugin upgrade builder` - Upgrade the builder plugin if you have < v1.3.0
+    - `tanzu plugin upgrade builder` - Upgrade the builder plugin if you have <= v1.2.0
 
 3. From the root of the `tanzu-build-plugin` repo, run `make plugin-build-install-local`
 
