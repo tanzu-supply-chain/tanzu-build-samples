@@ -15,4 +15,4 @@ spec:
   - name: add-env
     containerTask:
       image: tomkennedy73/container-app-modifier
-      args: ["SOME-ENV-NAME", "SOME-ENV-VALUE"]
+      args: ["SOME-ENV-NAME=SOME-ENV-VALUE"]
