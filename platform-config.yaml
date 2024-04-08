@@ -9,7 +9,7 @@ spec:
     value: bar
   buildpacks:
     builder: "paketobuildpacks/builder-jammy-base"
-  postBuild:
+  postBuildSteps:
   - name: apply-spring-boot-conventions
     namedTask: tanzu-spring-boot
   - name: add-env
