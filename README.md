@@ -29,13 +29,10 @@ Expected output:
 
 ##  Plugin Installation
 
-1. Clone the plugin git repo `git clone https://gitlab.eng.vmware.com/build-service/tanzu-build-plugin.git`
+1. Configure the tanzu CLI to use the staging inventory `tanzu config set env.TANZU_CLI_ADDITIONAL_PLUGIN_DISCOVERY_IMAGES_TEST_ONLY harbor-repo.vmware.com/tanzu_cli_stage/plugins/plugin-inventory:latest`
 
-2. Ensure the `tanzu builder` plugin is up to date
-    - `tanzu plugin list` - View the plugins you have installed and version
-    - `tanzu plugin install builder` - Install the builder plugin if you don't have it
-    - `tanzu plugin upgrade builder` - Upgrade the builder plugin if you have < v1.2.0
+1. Install the build plugin `tanzu plugin install build`
 
-3. From the root of the `tanzu-build-plugin` repo, run `make plugin-build-install-local`
+1. Verify the build plugin is installed (and display helptext) `tanzu build --help`
 
-4. Verify the build plugin is installed (and display helptext) `tanzu build --help`
+1. Once available, the plugin can be upgrade with `tanzu plugin upgrade build`
