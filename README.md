@@ -4,7 +4,7 @@
 1. Follow instructions [below](#plugin-installation) to install the latest plugin
 2. run `tanzu build config --build-plan-source-type=file --build-plan-source platform-config.yaml --containerapp-registry <some-writable-registry>`
 3. cd into any one of the sample app in this repo
-4. Run `tanzu build --output-dir /tmp/tanzu` to build all apps, or `tanzu build --platform-config ../platform-config.yml --app-name my-app  --output-dir /tmp/tanzu` to build `my-app` only.
+4. Run `tanzu build --output-dir /tmp/tanzu` to build all apps, or `tanzu build --platform-config ../platform-config.yaml --app-name my-app  --output-dir /tmp/tanzu` to build `my-app` only.
    (Note the platform config flag is temporary)
 
 
