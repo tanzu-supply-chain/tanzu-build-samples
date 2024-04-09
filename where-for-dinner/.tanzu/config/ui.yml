@@ -1,0 +1,12 @@
+apiVersion: apps.tanzu.vmware.com/v1
+kind: ContainerApp
+metadata:
+  name: ui
+spec:
+  build:
+    path: "../../where-for-dinner-ui"
+    nonSecretEnv:
+    - name: BP_NODE_RUN_SCRIPTS
+      value: build
+    - name: BP_WEB_SERVER_ROOT
+      value: dist

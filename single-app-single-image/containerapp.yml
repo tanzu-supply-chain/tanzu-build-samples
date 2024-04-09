@@ -1,7 +1,0 @@
-apiVersion: apps.tanzu.vmware.com/v1
-kind: ContainerApp
-metadata:
-  name: single-image-single-app
-spec:
-  build:
-    path: "single-image-single-app-src"

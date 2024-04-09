@@ -1,0 +1,10 @@
+apiVersion: apps.tanzu.vmware.com/v1
+kind: ContainerApp
+metadata:
+  name: search
+spec:
+  build:
+    path: "../../where-for-dinner-search"
+    nonSecretEnv:
+      - name: BP_JVM_VERSION
+        value: "21"

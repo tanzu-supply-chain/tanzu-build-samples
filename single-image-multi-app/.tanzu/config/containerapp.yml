@@ -1,0 +1,15 @@
+apiVersion: apps.tanzu.vmware.com/v1
+kind: ContainerApp
+metadata:
+  name: single-image-multi-app
+spec:
+  build:
+    path: "../.."
+    buildpacks: {}
+    nonSecretEnv:
+    - name: BP_JVM_VERSION
+      value: "17"
+    - name: BP_JAVA_INSTALL_NODE
+      value: "true"
+    - name: BP_NODE_PROJECT_PATH
+      value: "frontend"
