@@ -4,7 +4,7 @@ metadata:
   name: notify
 spec:
   build:
-    path: "../..//where-for-dinner-notify"
+    path: "../../where-for-dinner-notify"
     nonSecretEnv:
       - name: BP_JVM_VERSION
         value: "21"
