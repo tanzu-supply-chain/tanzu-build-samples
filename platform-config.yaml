@@ -16,3 +16,5 @@ spec:
     containerTask:
       image: tomkennedy73/container-app-modifier
       args: ["SOME-ENV-NAME=SOME-ENV-VALUE"]
+  runtimes:
+  - name: container-image
