@@ -8,9 +8,17 @@ spec:
     nonSecretEnv:
       - name: "BP_NODE_RUN_SCRIPTS"
         value: "build"
+      - name: "BP_NPM_START_SCRIPT"
+        value: "serve"
       - name: "BP_WEB_SERVER"
         value: "ngingx"
       - name: "BP_WEB_SERVER_ROOT"
         value: "build"
       - name: "BP_WEB_SERVER_ENABLE_PUSH_STATE"
         value: "true"
+  nonSecretEnv:
+    - name: PORT
+      value: "8080"
+  ports:
+    - name: main
+      port: 8080

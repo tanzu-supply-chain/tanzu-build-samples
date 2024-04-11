@@ -13,3 +13,6 @@ spec:
       value: "true"
     - name: BP_NODE_PROJECT_PATH
       value: "frontend"
+  ports:
+    - name: main
+      port: 8080
