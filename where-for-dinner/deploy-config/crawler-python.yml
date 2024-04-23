@@ -2,15 +2,11 @@ apiVersion: apps.tanzu.vmware.com/v1
 kind: ContainerApp
 metadata:
   creationTimestamp: null
-  name: csharp-weatherforecast
+  name: crawler-python
 spec:
   build:
     buildpacks: {}
-    path: ..
+    path: ../where-for-dinner-crawler-python
   ports:
   - name: main
     port: 8080
-  nonSecretEnv:
-  - name: PORT
-    value: "8080"
-

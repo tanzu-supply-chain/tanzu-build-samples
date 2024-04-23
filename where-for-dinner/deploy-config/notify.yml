@@ -2,15 +2,14 @@ apiVersion: apps.tanzu.vmware.com/v1
 kind: ContainerApp
 metadata:
   creationTimestamp: null
-  name: csharp-weatherforecast
+  name: notify
 spec:
   build:
     buildpacks: {}
-    path: ..
+    path: ../where-for-dinner-notify
+    nonSecretEnv:
+    - name: BP_JVM_VERSION
+      value: "21"
   ports:
   - name: main
     port: 8080
-  nonSecretEnv:
-  - name: PORT
-    value: "8080"
-

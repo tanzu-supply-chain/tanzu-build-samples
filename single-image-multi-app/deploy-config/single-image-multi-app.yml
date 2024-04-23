@@ -1,11 +1,12 @@
 apiVersion: apps.tanzu.vmware.com/v1
 kind: ContainerApp
 metadata:
+  creationTimestamp: null
   name: single-image-multi-app
 spec:
   build:
-    path: "../.."
     buildpacks: {}
+    path: ..
     nonSecretEnv:
     - name: BP_JVM_VERSION
       value: "17"
@@ -14,5 +15,5 @@ spec:
     - name: BP_NODE_PROJECT_PATH
       value: "frontend"
   ports:
-    - name: main
-      port: 8080
+  - name: main
+    port: 8080

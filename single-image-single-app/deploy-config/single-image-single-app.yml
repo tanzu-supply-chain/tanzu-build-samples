@@ -1,14 +1,15 @@
 apiVersion: apps.tanzu.vmware.com/v1
 kind: ContainerApp
 metadata:
+  creationTimestamp: null
   name: single-image-single-app
 spec:
   build:
-    path: "../.."
+    buildpacks: {}
+    path: ..
   ports:
-    - name: main
-      port: 8080
+  - name: main
+    port: 8080
   nonSecretEnv:
-    - name: PORT
-      value: "8080"
-
+  - name: PORT
+    value: "8080"

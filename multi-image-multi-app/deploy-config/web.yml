@@ -1,10 +1,12 @@
 apiVersion: apps.tanzu.vmware.com/v1
 kind: ContainerApp
 metadata:
+  creationTimestamp: null
   name: web
 spec:
   build:
-    path: "../../web"
+    buildpacks: {}
+    path: ../web
     nonSecretEnv:
       - name: "BP_NODE_RUN_SCRIPTS"
         value: "build"
@@ -20,5 +22,5 @@ spec:
     - name: PORT
       value: "8080"
   ports:
-    - name: main
-      port: 8080
+  - name: main
+    port: 8080
