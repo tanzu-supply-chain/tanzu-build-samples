@@ -1,6 +1,6 @@
 ---
 apiversion: build.tanzu.vmware.com/v1
-kind: containerappbuildplan
+kind: ContainerAppBuildPlan
 metadata:
   name: simple.tanzu.vmware.com
 spec:
