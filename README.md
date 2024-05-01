@@ -5,7 +5,8 @@
 2. run `tanzu build config --build-plan-source-type=file --build-plan-source platform-config.yaml --containerapp-registry <some-writable-registry>/{name}`
 3. cd into any one of the sample app in this repo
 4. Run `tanzu build --output-dir /tmp/tanzu` to build all apps, or `tanzu build my-app  --output-dir /tmp/tanzu` to build `my-app` only.
-
+ *NOTE*: If you are using a localhost registry, you will need to add `--network=host` when running tanzu build to allow the build container to access localhost
+ 
 Expected output:
 
 - Standard err should print:
