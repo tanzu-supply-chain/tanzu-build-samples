@@ -2,29 +2,22 @@
 
 ## Usage
 1. Follow instructions [below](#plugin-installation) to install the latest plugin
-2. run `tanzu build config --build-plan-source-type=file --build-plan-source platform-config.yaml --containerapp-registry <some-writable-registry>`
+2. run `tanzu build config --build-plan-source-type=file --build-plan-source platform-config.yaml --containerapp-registry <some-writable-registry>/{name}`
 3. cd into any one of the sample app in this repo
 4. Run `tanzu build --output-dir /tmp/tanzu` to build all apps, or `tanzu build my-app  --output-dir /tmp/tanzu` to build `my-app` only.
 
-
 Expected output:
 
-- Standard out should print:
+- Standard err should print:
 
     - List of ContainerApps found
     - Build log for each ContainerApp
     - Location of additional output files
     - Digest of built digest for each ContainerApp
 
-- A directory should be created in the directory you ran the command from (default is `tanzu/`, but can be customized via `tanzu build --output-dir ./some/dir/`)
+- A temporary directory should be created, but can be customized via `tanzu build --output-dir ./some/dir/`. This dir will be printed to stdout at the end of the build.
 
-- There will be a sub-directory for each built ContainerApp 
-    
-    [feedback wanted: It doesn't clean the directory each build. So if you've built an app with a under a different name, the old results gets left here. Is this desirable behaviour?]
-
-- In each sub-directory, there will be:
-    - `containerapp.yaml` which is essentially the same as the ContainerApp config, but with the `.spec.build` removed and `.spec.image` filled in.
-    - `image.txt` which contains the full image digest for the built app.
+- There will be a sub-directory for each built ContainerApp. The contents will vary depending on the runtime
 
 ##  Plugin Installation
 
@@ -35,3 +28,4 @@ Expected output:
 1. Verify the build plugin is installed (and display helptext) `tanzu build --help`
 
 1. Once available, the plugin can be upgrade with `tanzu plugin upgrade build`
+
