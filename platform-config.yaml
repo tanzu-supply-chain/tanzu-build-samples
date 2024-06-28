@@ -6,7 +6,7 @@ metadata:
 spec:
   registry: ""
   buildpacks:
-    builder: "paketobuildpacks/builder-jammy-base"
+    builder: tanzu-build-public.packages.broadcom.com/builders/builder-jammy-base:0.1.2@sha256:2370d9e499afb6e0b2fb0d3c4533d733a47f771eb0a115c4f9aa75cd081ee072
   postbuildsteps:
   - namedtask: tanzu-spring-boot
   # - name: add-env
