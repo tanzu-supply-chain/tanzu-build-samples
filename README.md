@@ -22,11 +22,18 @@ Expected output:
 
 ##  Plugin Installation
 
-1. Configure the tanzu CLI to use the staging inventory `tanzu config set env.TANZU_CLI_ADDITIONAL_PLUGIN_DISCOVERY_IMAGES_TEST_ONLY harbor-repo.vmware.com/tanzu_cli_stage/plugins/plugin-inventory:latest`
+1. Login to the plugin registry `tap-tanzu-cli-docker-virtual.usw1.packages.broadcom.com` (requires Broadcom VPN)
+
+1. Configure the tanzu CLI to use the staging inventory
+
+```shell
+tanzu config set env.TANZU_CLI_ADDITIONAL_PLUGIN_DISCOVERY_IMAGES_TEST_ONLY tap-tanzu-cli-docker-virtual.usw1.packages.broadcom.com/tanzu_cli_stage/plugins/plugin-inventory:latest
+
+tanzu config set env.TANZU_CLI_AUTHENTICATED_REGISTRY tap-tanzu-cli-docker-virtual.usw1.packages.broadcom.com
+```
 
 1. Install the build plugin `tanzu plugin install build`
 
 1. Verify the build plugin is installed (and display helptext) `tanzu build --help`
 
 1. Once available, the plugin can be upgrade with `tanzu plugin upgrade build`
-
